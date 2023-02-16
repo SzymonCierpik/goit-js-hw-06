@@ -35,6 +35,7 @@ const newElement = document.getElementById("ingredients");
 for (const ingredient of ingredients) {
   const li = document.createElement("li");
   li.textContent = ingredient;
-  newElement.append(li);
   li.classList.add("item");
 }
+
+newElement.append(...ingredients);
