@@ -32,10 +32,13 @@ const ingredients = [
 
 const newElement = document.getElementById("ingredients");
 
+const liElements = [];
+
 for (const ingredient of ingredients) {
   const li = document.createElement("li");
   li.textContent = ingredient;
   li.classList.add("item");
+  liElements.push(li);
 }
 
-newElement.append(...ingredients);
+newElement.append(...liElements);
